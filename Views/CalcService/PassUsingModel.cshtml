@@ -1,0 +1,30 @@
+﻿@model Web_laba_back_1.Models.Actions
+@{ ViewData["Title"] = "PassUsingModel"; }
+<h1>@ViewData["Title"]</h1>
+
+<b>Rand Value First : </b> @Model.val1
+<br />
+<b>Rand Value Second : </b> @Model.val2
+<br />
+
+<b>Add: </b>
+<br />
+@Model.val1 +  @Model.val2 = @Model.add
+<br />
+
+<b>Sub : </b>
+<br />
+@Model.val1 -  @Model.val2 =  @Model.sub
+<br />
+
+<b>Mult : </b>
+@Model.val1 *  @Model.val2 =  @Model.mul
+<br />
+
+<b>Div :</b>
+<br />
+@Model.val1 /  @Model.val2 =  @if (Model.val2 != 0)
+{@Model.div}
+else
+{<span> Exception: Division by zero</span>}
+<br />
